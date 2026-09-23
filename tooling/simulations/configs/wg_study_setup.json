@@ -1,0 +1,55 @@
+{
+  "group": {
+    "name": "WG Study Group",
+    "description": "A study group for evaluating the WG cost-sharing deliberation scenario."
+  },
+  "question": {
+    "title": "Fair Cost Sharing in our WG",
+    "description": "<p>We are a shared flat (WG) with several flatmates. Together we pay for things that everyone uses, like internet, electricity, cleaning supplies, and occasionally shared groceries or furniture.</p><p>We need a fair and simple way to split these costs. How should we organize this so that no one feels disadvantaged, but the system isn't too complicated?</p>",
+    "constraints": [
+      "Fairness: Everyone pays their fair share, avoiding resentment.",
+      "Simplicity: The system should not require complex bookkeeping.",
+      "Flexibility: It must handle different incomes and varying flatmate usage."
+    ],
+    "phases": [
+      {
+        "name": "Proposed",
+        "duration_days": 0
+      },
+      {
+        "name": "AnswerSearch",
+        "duration_days": 14
+      },
+      {
+        "name": "Voting",
+        "duration_days": 2
+      }
+    ]
+  },
+  "behavior": {
+    "_comment": "WG-Studiengruppe 2026-08-05 calibration — values derived from real study metrics",
+    "attention_half_life_days": 7.0,
+    "engagement_alpha": 2.0,
+    "engagement_beta": 3.0,
+    "nighttime_baseline": 0.05,
+    "p_migrate": 0.50,
+    "p_create_root": 0.03,
+    "p_vote": 0.72,
+    "root_ceiling": 12,
+    "root_ceiling_damping": 0.02,
+    "root_ceiling_soft": 5,
+    "root_ceiling_soft_damping": 0.15,
+    "authored_root_damping": 0.08,
+    "prolific_author_threshold": 3,
+    "prolific_author_damping": 0.3,
+    "tab_weights": {
+      "foryou": 0.55,
+      "newest": 0.10,
+      "improvements": 0.15,
+      "subscriptions": 0.20
+    },
+    "top_k": 5,
+    "source_study": "WG_Studiengruppe_2026",
+    "calibration_date": "2026-08-05"
+  }
+}

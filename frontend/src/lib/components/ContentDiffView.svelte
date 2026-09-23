@@ -1,0 +1,232 @@
+<script lang="ts">
+	import { computeBlockDiff, type DiffBlock, type BlockDiffResult } from '$lib/utils/block-diff';
+	import * as m from '$lib/paraglide/messages.js';
+
+	interface Props {
+		/** The parent/base proposal's HTML content */
+		baseHtml: string;
+		/** The current (edited) proposal's HTML content */
+		currentHtml: string;
+	}
+
+	let { baseHtml, currentHtml }: Props = $props();
+
+	const diffResult = $derived<BlockDiffResult>(computeBlockDiff(baseHtml, currentHtml));
+	const hasChanges = $derived(
+		diffResult.stats.added > 0 ||
+			diffResult.stats.deleted > 0 ||
+			diffResult.stats.modified > 0 ||
+			diffResult.stats.moved > 0
+	);
+</script>
+
+<div class="rich-diff-container">
+	{#if diffResult.blocks.length === 0}
+		<p class="diff-empty">{m.diff_no_changes_yet()}</p>
+	{:else if !hasChanges}
+		<p class="diff-empty">{m.diff_no_changes_detected()}</p>
+	{:else}
+		<div class="diff-stats-badge">
+			<span class="stat added" title="Added blocks">+{diffResult.stats.added}</span>
+			<span class="stat deleted" title="Deleted blocks">−{diffResult.stats.deleted}</span>
+			<span class="stat modified" title="Modified blocks">~{diffResult.stats.modified}</span>
+			<span class="stat moved" title="Moved blocks">↕{diffResult.stats.moved}</span>
+		</div>
+		<div class="diff-blocks ProseMirror">
+			{#each diffResult.blocks as block, idx (idx)}
+				{#if block.type === 'unchanged'}
+					<div class="diff-block unchanged">
+						{@html block.html}
+					</div>
+				{:else if block.type === 'deleted'}
+					<div class="diff-block deleted-indicator" title="Deleted content">
+						<div class="deleted-dots">
+							<span class="dot"></span>
+							<span class="dot"></span>
+							<span class="dot"></span>
+						</div>
+					</div>
+				{:else if block.type === 'added'}
+					<div class="diff-block added">
+						<span class="a11y-sr-only">Added:</span>
+
+						{@html block.html}
+					</div>
+				{:else if block.type === 'modified'}
+					<div class="diff-block modified">
+						<span class="a11y-sr-only">Modified:</span>
+
+						{@html block.diffHtml || block.html}
+					</div>
+				{:else if block.type === 'moved'}
+					<div class="diff-block moved">
+						<span class="a11y-sr-only">Moved:</span>
+
+						{@html block.diffHtml || block.html}
+					</div>
+				{/if}
+			{/each}
+		</div>
+	{/if}
+</div>
+
+<style>
+	.rich-diff-container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		width: 100%;
+	}
+
+	.diff-empty {
+		margin: 0;
+		padding: 2rem 1rem;
+		text-align: center;
+		color: var(--color-text-muted, #999);
+		font-style: italic;
+		font-size: 0.9rem;
+	}
+
+	.diff-stats-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 0.6rem;
+		background: var(--color-bg-tertiary, #f0f0f0);
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		font-family: monospace;
+		align-self: flex-start;
+		border: 1px solid var(--line, #e2e8f0);
+	}
+
+	.stat {
+		padding: 0.1rem 0.3rem;
+		border-radius: 3px;
+	}
+
+	.stat.added {
+		color: #059669;
+		background: #d1fae5;
+	}
+
+	.stat.deleted {
+		color: #dc2626;
+		background: #fee2e2;
+	}
+
+	.stat.modified {
+		color: #d97706;
+		background: #fef3c7;
+	}
+
+	.stat.moved {
+		color: #4f46e5;
+		background: #e0e7ff;
+	}
+
+	.diff-blocks {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.diff-block {
+		border-radius: 4px;
+		position: relative;
+	}
+
+	/* Unchanged blocks */
+	.diff-block.unchanged {
+		opacity: 0.6;
+		transition: opacity 0.2s;
+	}
+	.diff-block.unchanged:hover {
+		opacity: 0.9;
+	}
+
+	/* Added blocks */
+	.diff-block.added {
+		background-color: color-mix(in srgb, #10b981 10%, transparent);
+		border-left: 3px solid #10b981;
+		padding-left: 0.5rem;
+		padding-right: 0.25rem;
+	}
+
+	/* Modified blocks */
+	.diff-block.modified {
+		background-color: color-mix(in srgb, #f59e0b 10%, transparent);
+		border-left: 3px solid #f59e0b;
+		padding-left: 0.5rem;
+		padding-right: 0.25rem;
+	}
+
+	/* Moved blocks */
+	.diff-block.moved {
+		background-color: color-mix(in srgb, #6366f1 10%, transparent);
+		border-left: 3px dashed #6366f1;
+		padding-left: 0.5rem;
+		padding-right: 0.25rem;
+	}
+
+	/* Deleted Indicator (Collapsed) */
+	.diff-block.deleted-indicator {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.25rem;
+		background: color-mix(in srgb, #ef4444 8%, transparent);
+		border: 1px dashed color-mix(in srgb, #ef4444 40%, transparent);
+		border-radius: 4px;
+		margin: 0.25rem 0;
+		cursor: help;
+	}
+
+	.deleted-dots {
+		display: flex;
+		gap: 0.25rem;
+	}
+
+	.deleted-dots .dot {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: #ef4444;
+		opacity: 0.6;
+	}
+
+	/* A11y hidden text */
+	.a11y-sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
+	/* Global overrides for inner HTML (ins/del generated by html-diff) */
+	.diff-block :global(ins) {
+		background-color: color-mix(in srgb, #10b981 20%, transparent);
+		text-decoration: underline;
+		text-decoration-color: #10b981;
+		text-decoration-thickness: 2px;
+		color: #065f46;
+		padding: 0 2px;
+		border-radius: 2px;
+	}
+
+	.diff-block :global(del) {
+		background-color: color-mix(in srgb, #ef4444 20%, transparent);
+		text-decoration: line-through;
+		text-decoration-color: #ef4444;
+		text-decoration-thickness: 2px;
+		color: #991b1b;
+		padding: 0 2px;
+		border-radius: 2px;
+	}
+</style>

@@ -1,0 +1,4052 @@
+[
+  {
+    "run_id": "scaling_frontier_standard_pf_n10_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n10_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n10_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n10_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n10_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n10_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n10_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n10_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n10_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n25_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n25_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n25_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n25_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n25_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n25_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n25_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n25_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n25_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n200_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n200_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n200_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n200_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n200_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n200_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n200_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n200_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n200_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n400_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n400_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_standard_pf_n400_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n400_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n400_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_random_feed_n400_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n400_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n400_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "scaling_frontier_newest_feed_n400_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "newest"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_on_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "siphon_ablation_siphon_off_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_full_platform_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_feed_routing_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_no_ballot_diversity_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "dual_window_neither_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": true,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "ballot_config": {
+          "exclusivityMode": "none"
+        }
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n10_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n10_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n10_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n25_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n25_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n25_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n200_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n200_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "attention_baseline_null_model_n200_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": true,
+        "quality_aware": false,
+        "fixed_sessions_mean": 15,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 3
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n10_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n10_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n10_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 10,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n25_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n25_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n25_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 25,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n50_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n50_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n50_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 50,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n100_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n100_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n100_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 100,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n200_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n200_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n200_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 200,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n400_s42",
+    "seed": 42,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n400_s99",
+    "seed": 99,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  },
+  {
+    "run_id": "carpentras_ideal_theoretical_n400_s137",
+    "seed": 137,
+    "config": {
+      "scenario": "convergence",
+      "agents": 400,
+      "target_duration_days": 30,
+      "max_steps": 500,
+      "time_min_hours": 4,
+      "time_max_hours": 12,
+      "time_long_jump_chance": 0.15,
+      "initial_solution_min_delay_days": 0,
+      "initial_solution_max_delay_days": 0,
+      "progress_every_steps": 0,
+      "language": "en",
+      "disable_llm": true,
+      "question": {
+        "title": "Simulation Study",
+        "description": "Evaluating collective intelligence dynamics under controlled conditions."
+      },
+      "behavior": {
+        "deterministic_target": false,
+        "enable_siphon": false,
+        "quality_aware": true,
+        "fixed_sessions_mean": 50,
+        "fixed_sessions_spread": 0.2,
+        "max_actions_per_session": 10,
+        "personal_focus_weights": {
+          "mode": "random"
+        },
+        "pool_k_foryou": 50,
+        "pool_k_notifications": 0,
+        "pool_k_ballot": 0,
+        "fixed_sessions_max": 80,
+        "p_vote": 0.8,
+        "p_create_root": 0.05,
+        "independent_votes": true
+      }
+    }
+  }
+]

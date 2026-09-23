@@ -1,0 +1,90 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev:up",
+      "type": "shell",
+      "command": "PB_PORT=18090 DEV_FRONTEND_PORT=13000 docker compose -f .devcontainer/docker-compose.dev.yml up --build -d pocketbase sveltekit-dev",
+      "problemMatcher": []
+    },
+    {
+      "label": "dev:logs",
+      "type": "shell",
+      "command": "PB_PORT=18090 DEV_FRONTEND_PORT=13000 docker compose -f .devcontainer/docker-compose.dev.yml logs -f pocketbase sveltekit-dev",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "dev:down",
+      "type": "shell",
+      "command": "PB_PORT=18090 DEV_FRONTEND_PORT=13000 docker compose -f .devcontainer/docker-compose.dev.yml down || true",
+      "problemMatcher": []
+    },
+    {
+      "label": "dev:restart",
+      "dependsOn": ["dev:down", "dev:up"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "switch:to:dev",
+      "dependsOn": ["prod:down", "dev:up"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "frontend:dev (in devcontainer)",
+      "type": "shell",
+      "command": "cd frontend && npm run dev -- --host 0.0.0.0 --port 5173",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "backend:dev (in devcontainer)",
+      "type": "shell",
+      "command": "cd backend && npm run dev",
+      "isBackground": true,
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "prod:up",
+      "type": "shell",
+      "command": "docker compose up --build -d",
+      "problemMatcher": []
+    },
+    {
+      "label": "prod:logs",
+      "type": "shell",
+      "command": "docker compose logs -f pocketbase sveltekit",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "prod:down",
+      "type": "shell",
+      "command": "docker compose down || true",
+      "problemMatcher": []
+    },
+    {
+      "label": "prod:restart",
+      "dependsOn": ["prod:down", "prod:up"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "switch:to:prod",
+      "dependsOn": ["dev:down", "prod:up"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "migrations:check",
+      "type": "shell",
+      "command": "sh ./scripts/check-pocketbase-migrations.sh",
+      "problemMatcher": []
+    }
+  ]
+}

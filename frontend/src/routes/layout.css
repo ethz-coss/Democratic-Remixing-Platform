@@ -1,0 +1,591 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+	--ink: #111111;
+	--muted: #5a5a5a;
+	--line: #d8d8d8;
+	--paper: #ffffff;
+	--surface: #ffffff;
+	--brand: #111111;
+	--up: #111111;
+	--down: #111111;
+	/* ── Mobile-first tokens ── */
+	--touch-min: 44px;
+	--safe-b: env(safe-area-inset-bottom, 0px);
+	--safe-t: env(safe-area-inset-top, 0px);
+
+	/* ── Color palette ── */
+	--primary: #4f7df9;
+	--accent: #7c3aed;
+	--success: #16a34a;
+	--destructive: #dc2626;
+	--warning: #f59e0b;
+	--info: #0284c7;
+
+	/* ── Semantic surface colors ── */
+	--surface-secondary: #f9fafb;
+	--surface-tertiary: #f3f4f6;
+
+	/* ── Card system tokens ── */
+	--card-radius: 8px;
+	--card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	--card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+	--card-lift: -2px;
+
+	/* ── Z-index scale ── */
+	--z-base: 1;
+	--z-sticky: 10;
+	--z-topbar: 20;
+	--z-fab: 40;
+	--z-tab-bar: 50;
+	--z-dev: 55;
+	--z-backdrop: 59;
+	--z-drawer: 60;
+	--z-dropdown: 100;
+	--z-overlay: 200;
+	--z-max: 1000;
+
+	/* ── Unseen indicator ── */
+	--unseen: #3b82f6;
+
+	/* ── Phase Colors ── */
+	--phase-proposed: var(--muted);
+	--phase-active: var(--primary);
+	--phase-closing: var(--warning);
+	--phase-voting: var(--success);
+	--phase-decided: var(--ink);
+
+	/* Backwards compatibility for the phase-badge classes that use -text variants */
+	--phase-proposed-bg: color-mix(in srgb, var(--phase-proposed) 12%, transparent);
+	--phase-active-bg: color-mix(in srgb, var(--phase-active) 12%, transparent);
+	--phase-closing-bg: color-mix(in srgb, var(--phase-closing) 15%, transparent);
+	--phase-voting-bg: color-mix(in srgb, var(--phase-voting) 12%, transparent);
+	--phase-decided-bg: color-mix(in srgb, var(--phase-decided) 8%, transparent);
+}
+
+/* ── Global Utility Classes ── */
+.phase-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+}
+
+.phase-badge.proposed {
+	background: var(--phase-proposed-bg);
+	color: var(--phase-proposed);
+}
+.phase-badge.answer-search {
+	background: var(--phase-active-bg);
+	color: var(--phase-active);
+}
+.phase-badge.closing {
+	background: var(--phase-closing-bg);
+	color: var(--phase-closing);
+	/* Need to darken the fg a bit for contrast against warning */
+	color: #b45309;
+}
+.phase-badge.voting {
+	background: var(--phase-voting-bg);
+	color: var(--phase-voting);
+}
+.phase-badge.decided {
+	background: var(--phase-decided-bg);
+	color: var(--phase-decided);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+	min-height: 100%;
+}
+
+a {
+	color: var(--ink);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.app-shell {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+}
+
+.app-shell.fixed-layout {
+	height: 100dvh;
+	overflow: hidden;
+}
+
+.topbar {
+	position: sticky;
+	top: 0;
+	z-index: var(--z-topbar);
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.7rem 1rem;
+	background: var(--surface);
+	border-bottom: 1px solid var(--line);
+}
+
+.topbar-burger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--touch-min);
+	height: var(--touch-min);
+	padding: 0;
+	border: none;
+	background: transparent;
+	color: var(--ink);
+	cursor: pointer;
+	border-radius: 6px;
+	flex-shrink: 0;
+}
+
+.topbar-burger:hover {
+	background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.brand {
+	font-weight: 700;
+	letter-spacing: 0.01em;
+	font-size: 1.05rem;
+	color: var(--ink);
+	flex: 1;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.topbar-bell {
+	background: none;
+	border: none;
+	color: var(--muted, #666);
+	cursor: pointer;
+	padding: 0.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--touch-min);
+	flex-shrink: 0;
+	position: relative;
+}
+
+.topbar-bell:hover {
+	color: var(--ink, #111);
+}
+
+.topbar-bell-dot {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	min-width: 16px;
+	height: 16px;
+	padding: 0 3px;
+	border-radius: 8px;
+	background: #ef4444;
+	color: white;
+	font-size: 0.65rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	border: 2px solid var(--paper, #fff);
+}
+
+/* ── Topbar contextual button (border style — for burger/back) ───── */
+.topbar-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ink, #111);
+	padding: 0.3rem;
+	border: 1px solid var(--line, #ddd);
+	border-radius: 6px;
+	flex-shrink: 0;
+	background: transparent;
+	cursor: pointer;
+	min-width: 36px;
+	min-height: 36px;
+	position: relative;
+	transition: background 0.12s;
+}
+
+.topbar-btn:hover {
+	background: color-mix(in srgb, var(--ink, #111) 6%, var(--paper, #fff));
+}
+
+/* ── Flat icon buttons (no border, circular hover) ───────────────── */
+.flat-header-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ink, #111);
+	padding: 0.3rem;
+	border: none;
+	border-radius: 50%;
+	flex-shrink: 0;
+	background: transparent;
+	cursor: pointer;
+	min-width: 36px;
+	min-height: 36px;
+	position: relative;
+	transition:
+		background 0.12s,
+		color 0.12s;
+}
+
+.flat-header-btn:hover {
+	background: color-mix(in srgb, var(--ink, #111) 6%, var(--paper, #fff));
+}
+
+/* ── Question context button (tinted blue) ───────────────────────── */
+.topbar-question-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0284c7;
+	padding: 0.3rem;
+	border: 1px solid color-mix(in srgb, #0ea5e9 25%, transparent);
+	border-radius: 6px;
+	flex-shrink: 0;
+	background: color-mix(in srgb, #0ea5e9 10%, var(--paper, #fff));
+	cursor: pointer;
+	min-width: 36px;
+	min-height: 36px;
+	position: relative;
+	transition: background 0.12s;
+}
+
+.topbar-question-btn:hover {
+	background: color-mix(in srgb, #0ea5e9 18%, var(--paper, #fff));
+}
+
+/* ── Notification dot ────────────────────────────────────────────── */
+.topbar-red-dot {
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	min-width: 16px;
+	height: 16px;
+	padding: 0 3px;
+	border-radius: 8px;
+	background: #ef4444;
+	color: white;
+	font-size: 0.65rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	border: 2px solid var(--paper, #fff);
+}
+
+/* ── Question title in topbar ────────────────────────────────────── */
+.topbar-question-title {
+	flex: 1;
+	margin: 0;
+	font-size: 0.88rem;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.2;
+}
+
+.page-wrap {
+	flex: 1 1 auto;
+	width: 100%;
+	max-width: 44rem;
+	margin: 0 auto;
+	padding: 1rem;
+	min-width: 0;
+}
+
+/* When in proposals route, page-wrap should not constrain the fixed layout */
+.page-wrap.no-chrome {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.page-wrap > * {
+	min-width: 0;
+}
+
+.ghost {
+	border: 1px solid var(--line);
+	background: transparent;
+	padding: 0.45rem 0.8rem;
+	border-radius: var(--radius-md, 6px);
+	font-weight: 600;
+	cursor: pointer;
+	color: var(--ink);
+}
+
+.section-card {
+	background: transparent;
+	border: 0;
+	border-top: 1px solid var(--line);
+	border-radius: 0;
+	padding: 1rem 0;
+	min-width: 0;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.muted {
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.stack {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.title {
+	font-size: clamp(1.3rem, 3.6vw, 1.75rem);
+	line-height: 1.15;
+	margin: 0;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.65rem 1rem;
+	border-radius: var(--radius-md, 6px);
+	border: 1px solid transparent;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn-primary {
+	background: var(--ink);
+	color: var(--paper);
+	border-color: var(--ink);
+}
+
+.btn-secondary {
+	background: transparent;
+	border-color: var(--ink);
+	color: var(--ink);
+}
+
+.pill-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+}
+
+.pill {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0;
+	font-size: 0.82rem;
+	background: transparent;
+	border: 1px solid var(--line);
+}
+
+.dev-sim-hover {
+	position: fixed;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: var(--z-dev);
+	display: flex;
+	align-items: stretch;
+	pointer-events: auto;
+	max-width: 100vw;
+}
+
+.dev-sim-hover:not(.open) {
+	width: 2.2rem;
+}
+
+.dev-sim-hover:not(.open) .dev-sim-modal {
+	display: none;
+}
+
+.dev-sim-trigger {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	padding: 0.6rem 0.45rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	background: #111111;
+	color: #ffffff;
+	border: 1px solid #111111;
+	border-left: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.dev-sim-modal {
+	width: min(30rem, 92vw);
+	height: calc(100dvh - 2.2rem);
+	background: var(--paper);
+	border: 1px solid var(--line);
+	border-left: none;
+	display: grid;
+	grid-template-rows: auto minmax(0, 1fr);
+	transform: translateX(calc(-100% - 2.2rem));
+	opacity: 0;
+	transition:
+		transform 180ms ease,
+		opacity 180ms ease;
+	pointer-events: none;
+}
+
+.dev-sim-modal.open {
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dev-sim-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.6rem;
+	padding: 0.5rem 0.65rem;
+	border-bottom: 1px solid var(--line);
+	font-size: 0.85rem;
+	background: #f9fbfd;
+}
+
+.dev-sim-head a {
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.dev-sim-head-actions {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+}
+
+.dev-sim-close {
+	border: 1px solid var(--line);
+	background: #ffffff;
+	padding: 0.25rem 0.45rem;
+	font-size: 0.78rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.dev-sim-modal iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #ffffff;
+}
+
+@media (max-width: 640px) {
+	/* Prevent iOS auto-zoom by forcing 16px font size on inputs */
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='number'],
+	input[type='search'],
+	input[type='tel'],
+	input[type='url'],
+	textarea,
+	select {
+		font-size: 16px !important;
+	}
+
+	.topbar {
+		padding: 0.75rem 0.8rem;
+	}
+
+	.page-wrap {
+		padding: 0.8rem 0.8rem 5.15rem;
+	}
+
+	.section-card {
+		padding: 0.85rem;
+		border-radius: 0;
+	}
+
+	.stack {
+		gap: 0.7rem;
+	}
+
+	.btn {
+		padding: 0.6rem 0.85rem;
+	}
+
+	.dev-sim-hover {
+		top: auto;
+		bottom: 5.8rem;
+		transform: none;
+	}
+
+	.dev-sim-modal {
+		width: min(30rem, 92vw);
+		height: calc(100dvh - 7.2rem);
+	}
+}
+
+/* ── Map mode (DAG visualization) ──────────────────────────────────── */
+body.map-mode {
+	overflow: hidden;
+}
+
+body.map-mode .topbar {
+	display: none;
+}
+
+/* page-wrap is bypassed because .page-layout uses position:fixed */
+
+.flash-highlight {
+	animation: theme-flash 2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+	z-index: 10;
+	position: relative;
+}
+
+@keyframes theme-flash {
+	0% {
+		background-color: var(--surface, #ffffff);
+		box-shadow: 0 0 0 0 transparent;
+		transform: scale(1);
+	}
+	15% {
+		background-color: color-mix(in srgb, var(--primary, #4f7df9) 15%, #ffffff);
+		box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary, #4f7df9) 40%, transparent);
+		transform: scale(1.02);
+	}
+	100% {
+		background-color: var(--surface, #ffffff);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+		transform: scale(1);
+	}
+}

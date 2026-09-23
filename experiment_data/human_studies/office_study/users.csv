@@ -1,0 +1,9 @@
+id,avatar,created,email,emailVisibility,has_consented,has_seen_onboarding,language,name,persona,role,simulation,updated,user_agent,verified
+de13859e1d6aea12,,2026-06-23 23:24:56.989Z,de13859e1d6aea12@pseudo.local,False,False,True,en,,,admin,False,2026-08-23 13:42:04.449Z,,False
+bc56f126724fbb5b,,2026-07-06 12:34:24.446Z,bc56f126724fbb5b@pseudo.local,False,True,True,en,,,participant,False,2026-07-13 12:39:34.628Z,Chrome/Mobile,False
+5e73badbe38abb33,,2026-07-06 12:34:30.178Z,5e73badbe38abb33@pseudo.local,False,True,True,en,,,participant,False,2026-07-06 12:36:20.349Z,Firefox/Mobile,False
+8e4a80df3812470f,,2026-07-06 12:35:11.900Z,8e4a80df3812470f@pseudo.local,False,True,True,en,,,participant,False,2026-07-06 12:36:41.222Z,Chrome/Mobile,False
+4c86ed884e17d0af,,2026-07-06 12:37:50.326Z,4c86ed884e17d0af@pseudo.local,False,True,True,en,,,participant,False,2026-07-06 12:38:52.440Z,Chrome/Mobile,False
+0975d6bbf2b53d26,,2026-07-08 17:16:21.631Z,0975d6bbf2b53d26@pseudo.local,False,True,True,en,,,participant,False,2026-07-08 17:20:35.244Z,Safari/Desktop,False
+2ca359773483ca75,,2026-07-09 11:05:17.856Z,2ca359773483ca75@pseudo.local,False,True,True,en,,,participant,False,2026-07-09 11:05:27.385Z,Chrome/Desktop,False
+7db1f5da708157e4,,2026-07-13 12:44:18.494Z,7db1f5da708157e4@pseudo.local,False,True,True,en,,,participant,False,2026-07-13 12:44:43.146Z,Chrome/Desktop,False

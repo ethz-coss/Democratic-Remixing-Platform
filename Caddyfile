@@ -1,0 +1,30 @@
+{
+    auto_https disable_redirects
+}
+
+{$ORIGIN} {
+    # Compress responses for better performance
+    encode zstd gzip
+
+    @sveltekit_api {
+        path /api/action-logs* /api/dev-simulator* /api/push-* /api/user* /api/debug* /api/schema* /api/remix* /api/questions/*/contradiction-edge /api/questions/*/feed /api/questions/*/vote-sever
+    }
+
+    # Route SvelteKit internal APIs
+    handle @sveltekit_api {
+        reverse_proxy sveltekit:3000
+    }
+
+    # Route Pocketbase requests
+    handle /api/* {
+        reverse_proxy pocketbase:8090
+    }
+    handle /_/* {
+        reverse_proxy pocketbase:8090
+    }
+    
+    # Route everything else to SvelteKit
+    handle {
+        reverse_proxy sveltekit:3000
+    }
+}

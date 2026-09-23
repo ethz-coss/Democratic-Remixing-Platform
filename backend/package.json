@@ -1,0 +1,26 @@
+{
+  "name": "backend-hooks-tooling",
+  "private": true,
+  "scripts": {
+    "build:hooks": "tsup --config tsup.hooks.config.ts",
+    "build:migrations": "tsup --config tsup.migrations.config.ts",
+    "build": "npm run build:hooks && npm run build:migrations",
+    "dev": "npm run dev:hooks & npm run dev:migrations",
+    "dev:hooks": "tsup --config tsup.hooks.config.ts --watch",
+    "dev:migrations": "tsup --config tsup.migrations.config.ts --watch",
+    "typecheck:hooks": "tsc -p tsconfig.hooks.json --noEmit",
+    "typecheck:migrations": "tsc -p tsconfig.migrations.json --noEmit",
+    "typecheck": "npm run typecheck:hooks && npm run typecheck:migrations",
+    "test": "npm run build:hooks && vitest run src/hooks/**/*.spec.ts",
+    "test:watch": "vitest src/hooks/**/*.spec.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "pocketbase": "^0.27.0"
+  }
+}

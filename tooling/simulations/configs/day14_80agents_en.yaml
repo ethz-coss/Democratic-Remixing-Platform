@@ -1,0 +1,22 @@
+config:
+    agents: 80
+    seed: 42
+    scenario: convergence
+    max_steps: 1000
+    llm_provider: github-models
+    llm_model: openai/gpt-4o-mini
+    llm_temperature: 0.7
+    discussion_agents: 3
+    time_min_hours: 1
+    time_max_hours: 24
+    time_long_jump_chance: 0.2
+    time_long_jump_min_days: 1
+    time_long_jump_max_days: 4
+    target_duration_days: 14
+    branch_pressure: 0.5
+    progress_every_steps: 5
+    initial_solution_min_delay_days: 2
+    initial_solution_max_delay_days: 4
+    remix_probability: 0.15
+    merge_probability: 0.05
+    language: en

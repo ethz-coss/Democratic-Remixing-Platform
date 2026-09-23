@@ -1,0 +1,32 @@
+{
+  "group": {
+    "name": "WG-Studiengruppe",
+    "description": "Eine Studiengruppe zur Bewertung des WG-Szenarios für die faire Aufteilung gemeinsamer Kosten."
+  },"question": {
+    "title": "Wie finanzieren wir gemeinsame WG-Einkäufe fair, wenn alle unterschiedliche Bedürfnisse haben?",
+    "description": "<p>In einer WG teilen wir uns viele Dinge, aber wir nutzen sie selten genau gleich. Das grösste Thema ist oft das Essen: Manche leben vegan, andere haben Allergien, manche kochen jeden Tag, andere essen oft auswärts. Auch bei anderen Alltagsdingen gehen die Nutzungen weit auseinander, sei es bei Hygieneartikeln oder der Tinte für den WG-Drucker. Hinzu kommt, dass in unserer WG Menschen mit sehr unterschiedlichen finanziellen Möglichkeiten zusammenleben. Wir suchen nach einem System, mit dem wir unsere gemeinsamen Ausgaben fair aufteilen können, ohne stundenlang Kassenbons auseinanderzurechnen. Wie sieht eine clevere, entspannte und faire Lösung für den WG-Alltag aus, bei der sich niemand ausgenutzt oder überlastet fühlt?</p>",
+    "constraints": [
+      "Gefühlte Fairness: Das System muss individuelle Bedürfnisse (wie Ernährungsformen) sowie die unterschiedlichen Einkommensrealitäten der Mitbewohner:innen berücksichtigen, sodass sich niemand unfair behandelt fühlt.",
+      "Alltagstauglichkeit: Es muss total simpel in der Handhabung sein. Keine komplizierte Mathematik! Es sollte sich einfach in den Alltag integrieren lassen.",
+      "Kostendeckung: Alle gemeinsamen Ausgaben müssen zuverlässig abgedeckt sein."
+    ],
+    "phases": [
+      {
+        "name": "Proposed",
+        "duration_days": 0
+      },
+      {
+        "name": "AnswerSearch",
+        "duration_days": 7
+      },
+      {
+        "name": "Closing",
+        "duration_days": 2
+      },
+      {
+        "name": "Voting",
+        "duration_days": 2
+      }
+    ]
+  }
+}

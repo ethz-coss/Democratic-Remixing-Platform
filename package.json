@@ -1,0 +1,7 @@
+{
+  "name": "remix-platform-workspace",
+  "private": true,
+  "scripts": {
+    "migrations:check": "sh ./scripts/check-pocketbase-migrations.sh"
+  }
+}

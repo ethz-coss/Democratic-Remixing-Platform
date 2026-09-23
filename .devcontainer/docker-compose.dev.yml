@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  pocketbase:
+    build:
+      context: ../backend
+    restart: on-failure:5
+    userns_mode: keep-id
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - '${PB_PORT:-18090}:8090'
+    volumes:
+      - ../backend/pb_data:/pb/pb_data:z,U
+      - ../backend/pb_migrations:/pb/pb_migrations:z,U
+      - ../backend/pb_hooks:/pb/pb_hooks:z,U
+    environment:
+      # host.containers.internal resolves to the host machine from inside any Podman container.
+      # The Vite dev server runs on the host (not in a dedicated container), so this is how
+      # PocketBase reaches it. On Docker, use host-gateway or the service hostname instead.
+      - FRONTEND_URL=http://host.containers.internal:5173
+      - PUSH_SVELTE_URL=http://host.containers.internal:5173
+      - PUSH_SECRET=dev-secret-123
+    command:
+      - sh
+      - -c
+      - |
+        get_max_mtime() {
+          find /pb/pb_migrations /pb/pb_hooks -type f -exec stat -c %Y {} + 2>/dev/null | sort -nr | head -n1
+        }
+        while true; do
+          echo "Starting PocketBase..."
+          /pb/pocketbase migrate up
+          /pb/pocketbase serve --http=0.0.0.0:8090 --dev 2>&1 | awk '{ if ($$0 ~ /token=/) { match($$0, /token=[^ \033\.]*/); token = substr($$0, RSTART, RLENGTH); print "PocketBase Admin Login\nCreate your admin account here:\nURL: http://localhost:$${PB_PORT:-18090}/_/?" token > "/pb/pb_data/admin_login.txt"; fflush(); }; if ($$0 !~ /(GET|POST|PUT|PATCH|DELETE|OPTIONS).*\//) { print $$0; fflush(); } }' &
+          PB_PID=$$!
+          LAST_MTIME=$$(get_max_mtime)
+          while sleep 1; do
+            CUR_MTIME=$$(get_max_mtime)
+            if [ "$$CUR_MTIME" != "$$LAST_MTIME" ] && [ -n "$$CUR_MTIME" ]; then
+              echo "Changes detected in hooks or migrations. Restarting PocketBase..."
+              kill -TERM $$PB_PID
+              wait $$PB_PID 2>/dev/null
+              break
+            fi
+            if ! kill -0 $$PB_PID 2>/dev/null; then
+              echo "PocketBase exited unexpectedly. Restarting in 2s..."
+              sleep 2
+              break
+            fi
+          done
+        done
+    healthcheck:
+      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:8090/api/health']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  workspace:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile.workspace
+    working_dir: /workspace
+    restart: unless-stopped
+    userns_mode: keep-id
+    user: "${UID:-1000}:${GID:-1000}"
+    command: ['sh', '-c', 'while sleep 1000; do :; done']
+    environment:
+      - PUBLIC_POCKETBASE_URL=http://localhost:${PB_PORT:-18090}
+      - PRIVATE_POCKETBASE_URL=http://pocketbase:8090
+      - FRONTEND_INTERNAL_URL=http://sveltekit-dev:5173
+      - BACKEND_INTERNAL_URL=http://pocketbase:8090
+      - PRIVATE_API_DEBUG_LOGS=true
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ../:/workspace:z
+      - /workspace/frontend/node_modules
+      - /workspace/backend/node_modules
+    # Keep workspace independent so VS Code can attach even if PocketBase is flapping.
+
+  sveltekit-dev:
+    image: node:20-alpine
+    working_dir: /app
+    restart: unless-stopped
+    userns_mode: keep-id
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - '${DEV_FRONTEND_PORT:-13000}:5173'
+    environment:
+      - PUBLIC_POCKETBASE_URL=http://localhost:${PB_PORT:-18090}
+      - PRIVATE_POCKETBASE_URL=http://pocketbase:8090
+      - PRIVATE_API_DEBUG_LOGS=true
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - VAPID_PUBLIC_KEY=BA7rQ4FomEQYvVmXnjjoMEraYTXsoyWJplYzgt3CqrO-v4U5ufxFJtv2q-Q4xmZkLCoscf3epPYDJr1HOgqms0E
+      - VAPID_PRIVATE_KEY=CwSuSkNpr-i9YyslN3mSvfxcSeHkLi_aks6RYZMnp6A
+      - VAPID_SUBJECT=mailto:admin@example.com
+      - PUSH_SECRET=dev-secret-123
+    volumes:
+      - ../frontend:/app:z
+      - /app/node_modules
+    command:
+      [
+        'sh',
+        '-c',
+        'if [ ! -d node_modules ] || [ -z "$(ls -A node_modules 2>/dev/null)" ]; then npm ci; fi && npm run dev -- --host 0.0.0.0 --port 5173'
+      ]
+    depends_on:
+      pocketbase:
+        condition: service_healthy

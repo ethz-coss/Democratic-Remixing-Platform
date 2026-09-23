@@ -1,0 +1,30 @@
+{
+  "name": "remix-platform-dev",
+  "dockerComposeFile": ["docker-compose.dev.yml"],
+  "service": "workspace",
+  "remoteUser": "node",
+  "workspaceFolder": "/workspace",
+  "initializeCommand": "sh .devcontainer/prestart-cleanup.sh",
+  "runServices": ["workspace", "pocketbase"],
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "(cd frontend && npm ci) && (cd backend && npm install)",
+  "forwardPorts": [5173, 18090],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      },
+      "extensions": [
+        "svelte.svelte-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}

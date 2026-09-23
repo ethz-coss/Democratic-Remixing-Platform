@@ -1,0 +1,41 @@
+{
+  "experiment": {
+    "name": "Custom Simulation",
+    "run_id": "my_sim",
+    "label": "Demo"
+  },
+  "group": {
+    "name": "My Simulation Group",
+    "description": "The group under which simulated questions will be created."
+  },
+  "question": {
+    "title": "Your question title here",
+    "description": "A full description of the deliberation question.",
+    "constraints": [
+      "First constraint the proposed solution must satisfy.",
+      "Second constraint.",
+      "Third constraint."
+    ]
+  },
+  "simulation": {
+    "agents": 20,
+    "seed": 42,
+    "target_duration_days": 14,
+    "max_steps": 100,
+    "remix_probability": 0.15,
+    "merge_probability": 0.10,
+    "progress_every_steps": 5,
+    "language": "de"
+  },
+  "llm": {
+    "provider": "github-models",
+    "model": "openai/gpt-4o-mini",
+    "temperature": 0.7,
+    "enabled": true
+  },
+  "pocketbase": {
+    "base_url": "http://localhost:18090",
+    "admin_email": "admin@example.com",
+    "admin_password": "secretpassword"
+  }
+}

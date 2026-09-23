@@ -1,0 +1,21 @@
+FROM node:20-slim
+
+# Tools needed for interactive development in the dev container.
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends \
+		bash git zsh sudo python3 python3-pip ripgrep curl wget jq httpie ca-certificates procps \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& echo "node ALL=(ALL) NOPASSWD: /usr/bin/apt-get, /usr/bin/apt" > /etc/sudoers.d/node-apt \
+	&& chmod 0440 /etc/sudoers.d/node-apt
+
+# Keep default node user; compose maps UID/GID with keep-id.
+USER node
+WORKDIR /workspace
+
+# Copy package files first to leverage Docker cache
+COPY --chown=node:node frontend/package*.json ./frontend/
+COPY --chown=node:node backend/package*.json ./backend/
+
+# Install dependencies during build
+RUN cd frontend && npm ci
+RUN cd backend && npm install

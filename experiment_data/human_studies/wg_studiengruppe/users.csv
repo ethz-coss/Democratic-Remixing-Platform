@@ -1,0 +1,13 @@
+id,avatar,created,email,emailVisibility,has_consented,has_seen_onboarding,language,name,persona,role,simulation,updated,user_agent,verified
+2347e60c2ede6045,,2026-07-24 13:22:03.341Z,2347e60c2ede6045@pseudo.local,False,True,True,de,,,participant,False,2026-07-24 13:22:32.742Z,Safari/Mobile,False
+15e064539716cfbb,,2026-07-27 18:55:14.304Z,15e064539716cfbb@pseudo.local,False,True,True,de,,,participant,False,2026-07-27 18:56:23.765Z,Firefox/Mobile,False
+3e36e627a64bac27,,2026-07-27 19:59:21.071Z,3e36e627a64bac27@pseudo.local,False,True,True,en,,,participant,False,2026-07-28 11:25:25.613Z,Safari/Mobile,False
+3928dc02b346700b,,2026-07-27 20:09:27.419Z,3928dc02b346700b@pseudo.local,False,True,True,de,,,participant,False,2026-07-27 20:10:12.138Z,Chrome/Mobile,False
+407be8b01d4ce342,,2026-07-28 10:09:34.729Z,407be8b01d4ce342@pseudo.local,False,True,True,de,,,participant,False,2026-07-28 11:06:59.407Z,Chrome/Desktop,False
+34063db6dedf42bc,,2026-07-28 11:24:42.434Z,34063db6dedf42bc@pseudo.local,False,True,True,en,,,participant,False,2026-07-28 11:25:41.504Z,Chrome/Desktop,False
+b003312e6c38c8a5,,2026-07-28 13:00:11.467Z,b003312e6c38c8a5@pseudo.local,False,True,True,de,,,participant,False,2026-07-28 13:02:04.931Z,Chrome/Mobile,False
+563eab35510dcae3,,2026-08-02 09:45:55.422Z,563eab35510dcae3@pseudo.local,False,True,True,de,,,participant,False,2026-08-02 09:48:29.951Z,Firefox/Mobile,False
+cc3304ea9b75a00f,,2026-08-03 12:14:19.008Z,cc3304ea9b75a00f@pseudo.local,False,True,True,de,,,participant,False,2026-08-03 12:15:41.019Z,Firefox/Mobile,False
+adc82731fb3dc1de,,2026-08-03 13:34:03.271Z,adc82731fb3dc1de@pseudo.local,False,True,True,en,,,participant,False,2026-08-03 13:38:34.612Z,Chrome/Desktop,False
+155f1aa31205a1db,,2026-08-08 10:10:31.758Z,155f1aa31205a1db@pseudo.local,False,True,True,en,,,participant,False,2026-08-08 10:10:57.857Z,Firefox/Desktop,False
+a2ba6414638e53bd,,2026-09-01 12:57:43.594Z,a2ba6414638e53bd@pseudo.local,False,True,True,en,,,participant,False,2026-09-01 14:44:31.754Z,Firefox/Desktop,False

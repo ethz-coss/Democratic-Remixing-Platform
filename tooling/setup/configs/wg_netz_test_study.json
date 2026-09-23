@@ -1,0 +1,63 @@
+{
+  "group": {
+    "name": "WG-Netz-Test",
+    "description": "Schwarmintelligenz-Studie des WG-Netzes Winterthur: Gemeinsam erarbeiten wir Leitsätze für unsere Identität und ein System zum Teilen von Ressourcen.",
+    "visibility": "Public"
+  },
+  "questions": [
+    {
+      "title": "Wie definieren wir das WG-Netz und ihre Rolle in Winterthur?",
+      "description": "<p>Das WG-Netz existiert nun schon eine ganze Weile. Jetzt ist es an der Zeit, unsere Identität knackig auf den Punkt zu bringen – für unsere Website, Kanäle nach aussen und unser eigenes Selbstverständnis. In einem vergangenen Workshop haben wir bereits Grundsteine gelegt:</p><ul><li>Offen für alle kollektiven (Wohn-)formen.</li><li>Ein Gefäss für das soziale Teilen von Material, Arbeitskraft und Wissen für die WGs von Winterthur</li><li>Eine Stimme für WGs als bewusste Lebensform in Winterthur</li></ul><p>Gleichzeitig steht die Frage der Abgrenzung im Raum: Wenn wir \"offen für alle\" sind, wo ziehen wir die Grenze? Wer sind wir nicht? Wir suchen nach präzisen, gut formulierten Leitsätzen, die all das vereinen.</p>",
+      "constraints": [
+        "Kürze & Prägnanz: Der finale Vorschlag muss sich als Text für eine Website (Über-uns-Sektion) oder einen Info-Flyer eignen.",
+        "Fundament: Sollte die Kernwerte aus der Sitzung aufgreifen (Ressourcenteilen, soziale Vernetzung, bewusste Lebensform).",
+        "Klare Grenzen: Der Vorschlag muss aufzeigen oder zumindest implizieren, wo unsere Grenzen als Netzwerk liegen (Wer oder was gehört nicht dazu?)."
+      ],
+      "phases": [
+        {
+          "name": "Proposed",
+          "duration_days": 0
+        },
+        {
+          "name": "AnswerSearch",
+          "duration_days": 14
+        },
+        {
+          "name": "Closing",
+          "duration_days": 2
+        },
+        {
+          "name": "Voting",
+          "duration_days": 2
+        }
+      ]
+    },
+    {
+      "title": "Wie können wir Material, Räume und Ressourcen über WGs hinweg effizient teilen und lagern?",
+      "description": "<p>Viele WGs in Winterthur besitzen Dinge, die sie selten brauchen, die aber für andere extrem nützlich wären (Gartenwerkzeug, Licht-/Musikequipment, Fahrzeuge, Räume). Ausserdem erben wir als WG-Vernetzung bald eigenes Material (z.B. Equipment vom Bambole), für das wir einen zentralen Lagerplatz brauchen.</p><p>Wir suchen nach einem konkreten System (logistisch wie auch organisatorisch), wie wir diese Ressourcen stadtweit zugänglich machen können, ohne dass es im Chaos endet.</p>",
+      "constraints": [
+        "Doppel-Lösung: Der Ansatz muss sowohl dezentrales Teilen (WG zu WG) als auch zentrales Lagern (Eigentum der WG-Vernetzung) berücksichtigen.",
+        "Verwaltbarkeit: Es muss klar benannt werden, wie das System gepflegt wird (Wer hält die Liste aktuell? Wer hat den Schlüssel zum Lager?).",
+        "Niederschwelligkeit: Das Ausleihen muss so einfach sein, dass es im Alltag auch wirklich genutzt wird."
+      ],
+      "phases": [
+        {
+          "name": "Proposed",
+          "duration_days": 0
+        },
+        {
+          "name": "AnswerSearch",
+          "duration_days": 14
+        },
+        {
+          "name": "Closing",
+          "duration_days": 2
+        },
+        {
+          "name": "Voting",
+          "duration_days": 2
+        }
+      ]
+    }
+  ]
+}

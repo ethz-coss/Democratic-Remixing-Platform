@@ -1,0 +1,6 @@
+id,created,ended_at,phase_name,previous_phase,question,source_record_id,started_at,transition_metadata_json,transition_type,updated
+4eb5txufuvi17eo,2026-07-27 17:08:27.572Z,,Proposed,,0w3z1e5u1y1d83t,0w3z1e5u1y1d83t,2026-07-27 17:08:27.568Z,"{""author"": ""xutr6nr3440j17q"", ""title"": ""Wie finanzieren wir gemeinsame WG-Eink\u00e4ufe fair, wenn alle unterschiedliche Bed\u00fcrfnisse haben?""}",question_created,2026-07-27 17:08:27.572Z
+giggzajavvwc5lg,2026-07-27 17:08:27.640Z,2026-08-03 17:08:27.582Z,AnswerSearch,,0w3z1e5u1y1d83t,,2026-07-27 17:08:27.582Z,,setup_json,2026-07-27 17:08:27.640Z
+96abdbm16ypqydp,2026-08-03 17:09:00.008Z,2026-08-05 17:09:00.226Z,Closing,giggzajavvwc5lg,0w3z1e5u1y1d83t,,2026-08-03 17:09:00.006Z,"{""reason"": ""answer_search_elapsed""}",answer_search_elapsed,2026-08-05 17:09:00.227Z
+c4rstdnc7nk45uo,2026-08-05 17:09:00.229Z,2026-08-08 17:10:00.018Z,Voting,96abdbm16ypqydp,0w3z1e5u1y1d83t,,2026-08-05 17:09:00.226Z,"{""championsCount"": 5, ""reason"": ""closing_window_elapsed""}",closing_window_elapsed,2026-08-08 17:10:00.019Z
+pi9pj2ep48i41hg,2026-08-08 17:10:00.021Z,,Decided,c4rstdnc7nk45uo,0w3z1e5u1y1d83t,,2026-08-08 17:10:00.018Z,"{""abstentions"": 0, ""reason"": ""voting_window_elapsed"", ""totalBallots"": 3}",voting_window_elapsed,2026-08-08 17:10:00.021Z

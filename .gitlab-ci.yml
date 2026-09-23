@@ -1,0 +1,144 @@
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_HOST: tcp://docker:2375
+  IMAGE_TAG: $CI_COMMIT_REF_SLUG
+  POCKETBASE_IMAGE: $CI_REGISTRY_IMAGE/pocketbase
+  SVELTEKIT_IMAGE: $CI_REGISTRY_IMAGE/sveltekit
+
+# -------------------------
+# Test Stage
+# -------------------------
+
+test-backend:
+  stage: test
+  image: node:22-alpine
+  script:
+    - cd backend
+    - npm ci
+    - mkdir -p pb_data
+    - cp ci/types.d.ts pb_data/types.d.ts
+    - npm run typecheck
+    - npm run test
+  cache:
+    key:
+      files:
+        - backend/package-lock.json
+    paths:
+      - backend/node_modules/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: always
+
+test-frontend:
+  stage: test
+  image: node:22-alpine
+  script:
+    - cd frontend
+    - npm ci
+    - npm run check
+    - npm run test
+  cache:
+    key:
+      files:
+        - frontend/package-lock.json
+    paths:
+      - frontend/node_modules/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: always
+
+# -------------------------
+# Build Stage
+# -------------------------
+
+build-pocketbase:
+  stage: build
+  image: docker:24.0.5
+  retry: 2
+  services:
+    - docker:24.0.5-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - cd backend
+    - docker build -t $POCKETBASE_IMAGE:$IMAGE_TAG -t $POCKETBASE_IMAGE:latest .
+    - docker push $POCKETBASE_IMAGE:$IMAGE_TAG
+    - docker push $POCKETBASE_IMAGE:latest
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - backend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: always
+
+build-sveltekit:
+  stage: build
+  image: docker:24.0.5
+  retry: 2
+  services:
+    - docker:24.0.5-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - cd frontend
+    - docker build -t $SVELTEKIT_IMAGE:$IMAGE_TAG -t $SVELTEKIT_IMAGE:latest .
+    - docker push $SVELTEKIT_IMAGE:$IMAGE_TAG
+    - docker push $SVELTEKIT_IMAGE:latest
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      changes:
+        - frontend/**/*
+        - .gitlab-ci.yml
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: always
+
+# -------------------------
+# Deploy Stage
+# -------------------------
+
+deploy-production:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache openssh-client git
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - >
+      ssh $SERVER_USER@$SERVER_HOST
+      "podman login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY &&
+      cd ~/remix-platform-prototype &&
+      git pull &&
+      podman-compose -f docker-compose.prod.yml pull &&
+      podman-compose -f docker-compose.prod.yml down --remove-orphans &&
+      podman-compose -f docker-compose.prod.yml up -d"
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: manual

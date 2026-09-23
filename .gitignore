@@ -1,0 +1,26 @@
+backend/pb_data/
+frontend/node_modules/
+frontend/.svelte-kit/
+frontend/build/
+backend/node_modules/
+
+# PocketBase compiled outputs
+backend/pb_hooks/**/*.js
+backend/pb_migrations/**/*.js
+
+# Tooling (was: simulations/)
+tooling/simulations/.venv/*
+tooling/simulations/.env
+tooling/output/
+
+learned_rules.json
+LEARNED_RULES.md
+__pycache__
+.env.production
+scratch/
+
+deploy_key*
+
+.venv/
+
+cleanup/*

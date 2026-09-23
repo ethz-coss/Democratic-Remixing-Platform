@@ -1,0 +1,29 @@
+{
+  "group": {
+    "name": "Template-Studiengruppe",
+    "description": "Eine Testgruppe zur Evaluierung",
+    "visibility": "Public"
+  },
+  "question": {
+    "title": "Wie können wir das System am besten nutzen?",
+    "description": "Wir suchen nach neuen Wegen, um...",
+    "constraints": [
+      "Muss für alle verständlich sein",
+      "Sollte den Verwaltungsaufwand minimieren"
+    ],
+    "phases": [
+      {
+        "name": "AnswerSearch",
+        "duration_days": 14
+      },
+      {
+        "name": "Closing",
+        "duration_days": 2
+      },
+      {
+        "name": "Voting",
+        "duration_days": 2
+      }
+    ]
+  }
+}
