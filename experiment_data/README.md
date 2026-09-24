@@ -61,7 +61,7 @@ python -m tooling.simulations.experiments.analysis
 
 # 3. Run evaluation pipeline on a human study export
 python -m tooling.evaluation.run_evaluation \
-  --csv-dir tooling/data/human_studies/wg_netz_winterthur \
+  --csv-dir experiment_data/human_studies/wg_netz_winterthur \
   --question-id <QUESTION_ID> \
   --compute-metrics
 

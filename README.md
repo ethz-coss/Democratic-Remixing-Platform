@@ -59,12 +59,12 @@ When you spin up the platform for the very first time, the database will be enti
 
 1. **Create the PocketBase Admin (Superuser):**
    - For security, PocketBase v0.23+ generates a one-time secure setup URL. You cannot simply go to `http://localhost:18090/_/` directly.
-   - Open your VS Code terminal and look at the logs for the `pocketbase` container.
+   - Open a terminal and find the logs of the `pocketbase` dev container.
    - **Search the logs for this exact string:** `/#/pbinstall/`
    - You will find a link that looks like this: `http://0.0.0.0:8090/_/#/pbinstall/eyJhb...`
    - Copy that long URL and paste it into your browser, but **change `0.0.0.0:8090` to `localhost:18090`**.
    - Press enter. This will open the initial admin creation screen where you can set your email and password.
-2. **Create a Remix Platform User:**
+2. **Create a User:**
    - While still in the PocketBase Admin UI, navigate to the **`users`** collection on the left sidebar.
    - Click the **New record** button in the top right.
    - Fill in an `email`, `password`, and `passwordConfirm`. 
@@ -94,7 +94,7 @@ See `experiment_data/README.md` for full details.
 
 ## Deployment
 
-The production deployment uses Docker Compose to orchestrate PocketBase, SvelteKit, and Caddy (for automatic HTTPS).
+The production deployment uses Docker Compose to orchestrate PocketBase, SvelteKit, and Caddy (for automatic HTTPS). Of course you need to put int your own passwords and info.
 
 ```bash
 cp .env.production.template .env.production

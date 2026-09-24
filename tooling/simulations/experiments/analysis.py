@@ -10,8 +10,18 @@ from datetime import datetime
 from pathlib import Path
 import seaborn as sns
 import scipy.stats as st
+from matplotlib.patches import Rectangle
 
-OUT_DIR = "tooling/output/experiments"
+try:
+    from tooling._paths import EXPERIMENTS_OUTPUT, SIM_EXPERIMENTS_DATA, HUMAN_STUDIES_DATA, DATA_ROOT
+except ImportError:
+    _proj = Path(__file__).resolve().parent.parent.parent.parent
+    EXPERIMENTS_OUTPUT = str(_proj / "tooling" / "output" / "experiments")
+    SIM_EXPERIMENTS_DATA = str(_proj / "experiment_data" / "simulation_experiments")
+    HUMAN_STUDIES_DATA = str(_proj / "experiment_data" / "human_studies")
+    DATA_ROOT = str(_proj / "experiment_data")
+
+OUT_DIR = EXPERIMENTS_OUTPUT
 FIG_DIR = os.path.join(OUT_DIR, "figures")
 os.makedirs(FIG_DIR, exist_ok=True)
 
@@ -33,9 +43,23 @@ def _save_fig(fig, name: str):
     print(f"Saved {name}")
     plt.close(fig)
 
+def find_run_json_path(run_id: str) -> str | None:
+    path1 = os.path.join(EXPERIMENTS_OUTPUT, f"experiment_{run_id}.json")
+    if os.path.exists(path1):
+        return path1
+    path2 = os.path.join(SIM_EXPERIMENTS_DATA, f"experiment_{run_id}.json")
+    if os.path.exists(path2):
+        return path2
+    return None
+
+def find_run_files(pattern: str) -> list[str]:
+    files = set(glob.glob(os.path.join(EXPERIMENTS_OUTPUT, pattern)))
+    files.update(glob.glob(os.path.join(SIM_EXPERIMENTS_DATA, pattern)))
+    return sorted(files)
+
 def load_run_data(run_id):
-    path = os.path.join(OUT_DIR, f"experiment_{run_id}.json")
-    if not os.path.exists(path): return None
+    path = find_run_json_path(run_id)
+    if not path: return None
     with open(path, "r") as f: return json.load(f)
 
 def load_run_quality(run_id):
@@ -221,10 +245,10 @@ def plot_siphon_ablation(df: pd.DataFrame):
             ax.set_title(f"({panel_label}) {metric_short} at N={n}", fontweight='bold')
             
             # Annotate delta
-            on_vals = sub[sub["Condition"] == "Siphon ON"][metric].values
-            off_vals = sub[sub["Condition"] == "Siphon OFF"][metric].values
+            on_vals = sub[sub["Condition"] == "Siphon ON"][metric].to_numpy(dtype=float)
+            off_vals = sub[sub["Condition"] == "Siphon OFF"][metric].to_numpy(dtype=float)
             if len(on_vals) > 0 and len(off_vals) > 0:
-                delta = np.mean(on_vals) - np.mean(off_vals)
+                delta = float(np.mean(on_vals) - np.mean(off_vals))
                 sign = "+" if delta > 0 else ""
                 color = "#27ae60" if delta > 0 else "#c0392b"
                 ax.annotate(f"Δ = {sign}{delta:.3f}" if metric == "Efficiency" else f"Δ = {sign}{delta:.2f}",
@@ -233,10 +257,10 @@ def plot_siphon_ablation(df: pd.DataFrame):
             
             # Show Gini as secondary annotation
             for i, cond in enumerate(["Siphon ON", "Siphon OFF"]):
-                g = sub[sub["Condition"] == cond]["Gini"].values
+                g = sub[sub["Condition"] == cond]["Gini"].to_numpy(dtype=float)
                 if len(g) > 0:
                     ax.text(i, ax.get_ylim()[0] + 0.02 * (ax.get_ylim()[1] - ax.get_ylim()[0]),
-                           f"Gini={np.mean(g):.3f}", ha='center', va='bottom', fontsize=8, color='gray')
+                           f"Gini={float(np.mean(g)):.3f}", ha='center', va='bottom', fontsize=8, color='gray')
             
             ax.grid(axis='y', alpha=0.3)
     
@@ -244,7 +268,7 @@ def plot_siphon_ablation(df: pd.DataFrame):
              "Siphon ablation tested at N=50 and N=100. Scaling frontier data (Siphon ON)\n"
              "shows Standard PF maintains η > 0.7 at N=200–400, consistent with increasing benefit.",
              ha='center', fontsize=8, fontstyle='italic', color='gray')
-    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.tight_layout(rect=(0, 0.04, 1, 1))
     _save_fig(fig, "plot_2_siphon_ablation")
 
 # 3. Protecting Dissent
@@ -444,7 +468,7 @@ def plot_action_dynamics(df: pd.DataFrame):
         
         return {"binned": binned, "n_bins": n_bins, "total_days": total_days, "label": study_label}
 
-    base = Path(__file__).parent.parent.parent.parent / "experiment_data" / "human_studies"
+    base = Path(HUMAN_STUDIES_DATA)
 
     study1 = load_human_study(str(base / "wg_studiengruppe" / "action_logs.csv"), "Study 1")
     study2 = load_human_study(str(base / "wg_netz_winterthur" / "action_logs.csv"), "Study 2")
@@ -587,7 +611,7 @@ def plot_winner_lockin(df: pd.DataFrame):
     import matplotlib.lines as mlines
     median_line = mlines.Line2D([], [], color='black', marker='_', markersize=15, label='Median')
     seed_dot = mlines.Line2D([], [], color='black', marker='o', linestyle='None', markersize=5, alpha=0.6, label='Individual Seeds')
-    early_patch = plt.Rectangle((0,0),1,1, fc="gray", alpha=0.15, label='First 5 Days (First-Mover Zone)')
+    early_patch = Rectangle((0,0),1,1, fc="gray", alpha=0.15, label='First 5 Days (First-Mover Zone)')
     ax.legend(handles=[median_line, seed_dot, early_patch], fontsize=9, loc='upper right')
     ax.grid(True, alpha=0.3)
     
@@ -600,7 +624,7 @@ def plot_ballot_comparison(df: pd.DataFrame):
     Shows the diversity cost (votes displaced) and the diversity gain (label coverage).
     """
     run_files_by_n = {}
-    for rf in sorted(glob.glob(os.path.join(OUT_DIR, "experiment_scaling_frontier_standard_pf_*.json"))):
+    for rf in find_run_files("experiment_scaling_frontier_standard_pf_*.json"):
         m = re.search(r'_n(\d+)_', rf)
         if m:
             n = int(m.group(1))
@@ -773,8 +797,7 @@ def plot_subscription_lifecycle(df: pd.DataFrame):
     example_curves = None
     example_meta   = None
 
-    run_files_all = sorted(glob.glob(
-        os.path.join(OUT_DIR, "experiment_scaling_frontier_standard_pf_*.json")))
+    run_files_all = find_run_files("experiment_scaling_frontier_standard_pf_*.json")
 
     for rf in run_files_all:
         m = re.search(r'_n(\d+)_', rf)
@@ -811,6 +834,8 @@ def plot_subscription_lifecycle(df: pd.DataFrame):
 
     if not example_curves:
         return
+    if example_meta is None:
+        example_meta = {}
 
     # ── draw ───────────────────────────────────────────────────────
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
@@ -1034,8 +1059,8 @@ def plot_scaling_quality_over_time(df: pd.DataFrame):
             all_max_q, all_topk_q, all_ballot_q = [], [], []
             
             for _, row in subset.iterrows():
-                run_file = os.path.join(OUT_DIR, f"experiment_{row['run_id']}.json")
-                if not os.path.exists(run_file): continue
+                run_file = find_run_json_path(row['run_id'])
+                if not run_file: continue
                 
                 with open(run_file) as f:
                     data = json.load(f)
@@ -1166,7 +1191,7 @@ def plot_scaling_quality_over_time(df: pd.DataFrame):
     handles, labels = axes[0,0].get_legend_handles_labels()
     fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 0.98), ncol=3, fontsize=12)
     
-    fig.tight_layout(rect=[0, 0, 1, 0.96])
+    fig.tight_layout(rect=(0, 0, 1, 0.96))
     _save_fig(fig, "plot_9_quality_over_time")
 
 # ── 9b. Ballot Diversity Cost ──────────────────────────────────────────────
@@ -1205,8 +1230,8 @@ def plot_ballot_diversity_cost(df: pd.DataFrame):
             all_topk_eta, all_ballot_eta = [], []
             
             for _, row in subset.iterrows():
-                run_file = os.path.join(OUT_DIR, f"experiment_{row['run_id']}.json")
-                if not os.path.exists(run_file): continue
+                run_file = find_run_json_path(row['run_id'])
+                if not run_file: continue
                 
                 with open(run_file) as f:
                     data = json.load(f)
@@ -1332,7 +1357,7 @@ def plot_ballot_diversity_cost(df: pd.DataFrame):
     handles_bot, labels_bot = axes[1, 0].get_legend_handles_labels()
     axes[1, -1].legend(handles_bot, labels_bot, fontsize=9, loc='upper right')
     
-    fig.tight_layout(rect=[0, 0, 1, 0.94])
+    fig.tight_layout(rect=(0, 0, 1, 0.94))
     _save_fig(fig, "plot_9b_ballot_diversity_cost")
 
 
@@ -1366,8 +1391,8 @@ def plot_attention_coverage(df: pd.DataFrame):
             
             seed_zeros = []
             for _, row in runs.iterrows():
-                path = os.path.join(OUT_DIR, f"experiment_{row['run_id']}.json")
-                if not os.path.exists(path): continue
+                path = find_run_json_path(row['run_id'])
+                if not path: continue
                 with open(path) as f:
                     data = json.load(f)
                 props = data['evaluation_snapshot']['proposals']
@@ -1406,8 +1431,8 @@ def plot_attention_coverage(df: pd.DataFrame):
             runs = sf[(sf["regime"] == prefix) & (sf["N"] == n_target)]
             all_evals = []
             for _, row in runs.iterrows():
-                path = os.path.join(OUT_DIR, f"experiment_{row['run_id']}.json")
-                if not os.path.exists(path): continue
+                path = find_run_json_path(row['run_id'])
+                if not path: continue
                 with open(path) as f:
                     data = json.load(f)
                 props = data['evaluation_snapshot']['proposals']
@@ -1447,7 +1472,7 @@ def plot_human_vs_sim_attention(df: pd.DataFrame):
     """Horizontal grouped bar chart comparing human and simulated engagement metrics."""
     from collections import Counter
     
-    base = Path(__file__).parent.parent.parent.parent / "experiment_data" / "human_studies"
+    base = Path(HUMAN_STUDIES_DATA)
     
     HUMAN_ACTION_MAP = {
         "create_idea": "create_root", "remix_singular": "create_remix",
@@ -1496,8 +1521,8 @@ def plot_human_vs_sim_attention(df: pd.DataFrame):
     sim_subs, sim_remix, sim_merge, sim_migrate = 0, 0, 0, 0
     sim_count = 0
     for _, row in sim_runs.iterrows():
-        path = os.path.join(OUT_DIR, f"experiment_{row['run_id']}.json")
-        if not os.path.exists(path): continue
+        path = find_run_json_path(row['run_id'])
+        if not path: continue
         with open(path) as f:
             data = json.load(f)
         dec = data.get("decision_log", [])
@@ -1566,9 +1591,11 @@ def plot_human_vs_sim_attention(df: pd.DataFrame):
 
 
 def main():
-    csv_path = os.path.join(OUT_DIR, "experiment_results.csv")
+    csv_path = os.path.join(EXPERIMENTS_OUTPUT, "experiment_results.csv")
     if not os.path.exists(csv_path):
-        print("No experiment_results.csv found.")
+        csv_path = os.path.join(SIM_EXPERIMENTS_DATA, "experiment_results.csv")
+    if not os.path.exists(csv_path):
+        print("No experiment_results.csv found in tooling/output/experiments or experiment_data/simulation_experiments.")
         return
     df = pd.read_csv(csv_path)
 

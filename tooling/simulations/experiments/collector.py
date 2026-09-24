@@ -316,17 +316,31 @@ def compute_metrics(data: dict) -> dict:
 
 
 def main():
-    _project = Path(__file__).parent.parent.parent.parent
-    output_dir = _project / "tooling" / "output" / "experiments"
+    import zipfile
+    from tooling._paths import SIM_EXPERIMENTS_DATA, EXPERIMENTS_OUTPUT, DATA_ROOT
 
-    # Use the local output directory which has the new experiment configs
-    if list(output_dir.glob("experiment_*.json")):
-        source_dir = output_dir
-    else:
-        print("No experiment output files found in tooling/output/experiments/")
+    source_dir = None
+    sim_data_path = Path(SIM_EXPERIMENTS_DATA)
+    output_path = Path(EXPERIMENTS_OUTPUT)
+    zip_path = Path(DATA_ROOT) / "simulation_experiments.zip"
+
+    if list(sim_data_path.glob("experiment_*.json")):
+        source_dir = sim_data_path
+    elif list(output_path.glob("experiment_*.json")):
+        source_dir = output_path
+    elif zip_path.exists():
+        print(f"Extracting {zip_path.name} to {DATA_ROOT}...")
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.extractall(DATA_ROOT)
+        if list(sim_data_path.glob("experiment_*.json")):
+            source_dir = sim_data_path
+
+    if not source_dir:
+        print(f"No experiment output files found in {sim_data_path} or {output_path}")
         return
 
     files = sorted(source_dir.glob("experiment_*.json"))
+    print(f"Reading {len(files)} experiment JSON files from {source_dir}...")
 
     results = []
     for f in files:
@@ -352,6 +366,19 @@ def main():
         writer.writerows(results)
 
     print(f"Exported {len(results)} results to {csv_path}")
+
+    # Mirror to alternate directory if different
+    alt_dir = output_path if source_dir == sim_data_path else sim_data_path
+    try:
+        alt_dir.mkdir(parents=True, exist_ok=True)
+        alt_csv_path = alt_dir / "experiment_results.csv"
+        with open(alt_csv_path, "w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=keys)
+            writer.writeheader()
+            writer.writerows(results)
+        print(f"Mirrored {len(results)} results to {alt_csv_path}")
+    except Exception as e:
+        print(f"Notice: Could not mirror CSV to {alt_dir}: {e}")
 
     # Print summary
     from collections import Counter as C
