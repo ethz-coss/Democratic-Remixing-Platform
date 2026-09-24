@@ -81,4 +81,3 @@ replaced with `<pseudo_id>@pseudo.local`. No real PII is stored in this bundle.
   `tooling/evaluation/extract/export.py` on 2026-09-07.
 - Simulation JSONs produced by `tooling/simulations/experiments/runner.py`
   across August–September 2026.
-- Source commit: see `git log --oneline -1` at time of bundling.
