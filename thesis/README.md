@@ -6,8 +6,7 @@
 
 ## Abstract
 
-Scaling collective decision-making beyond small groups without concentrating authority remains an open challenge. This thesis designs, implements, and evaluates the Democratic Remixing Platform (DRP), which translates the remixing-based collective intelligence model of Carpentras et al. into a working deliberation tool. Participants iteratively build upon each other’s proposals in a directed acyclic graph, with attention managed by a Three-Window Architecture. Three field deployments (n = 7, 11, 12) combined with agent-based simulation at scales up to N = 400 generate design knowledge and knowledge about how human behavior departs from the model’s assumptions.
-The platform manages to keep selection efficiency high, but the generative process is constrained by bounded cognition and social norms: social inhibition of remixing suppressed convergence entirely in one deployment. Although bottlenecked by the cognitive friction of communication via the system, the DAG architecture provides the structural foundation to scale democratic collective intelligence
+Scaling collective decision-making beyond small groups without concentrating authority remains an open challenge. This thesis designs, implements, and evaluates _Synesis_, a democratic remixing platform that translates the remixing-based collective intelligence model of Carpentras et al. into a working deliberation tool. Participants iteratively build upon each other's proposals in a directed acyclic graph, with attention managed by a Three-Window Architecture. Three field deployments (n = 7, 11, 12) combined with agent-based simulation at scales up to N = 400 generate design knowledge and knowledge about how human behavior departs from the model's assumptions. The platform manages to keep selection efficiency high, but the generative process is constrained by bounded cognition and social norms: social inhibition of remixing suppressed convergence entirely in one deployment. Although bottlenecked by the cognitive friction of communication via the system, the DAG architecture provides the structural foundation to scale democratic collective intelligence.
 
 ## Citation
 
@@ -17,8 +16,7 @@ The platform manages to keep selection efficiency high, but the generative proce
   title   = {Remixing for Democratic Collective Intelligence: Design and Implementation of a Scalable Platform},
   school  = {ETH Z\"{u}rich},
   year    = {2026},
-  type    = {Master's Thesis},
-  note    = {Department of Humanities, Social and Political Sciences}
+  type    = {Master's Thesis}
 }
 ```
 

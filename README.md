@@ -1,4 +1,4 @@
-# Remix Platform
+# Synesis - Democratic Remix Platform
 
 A scalable democratic co-creation platform designed to overcome the friction of traditional deliberation. Built for the Master's Thesis: *"Remixing for Democratic Collective Intelligence: Design and Implementation of a Scalable Platform"*.
 
